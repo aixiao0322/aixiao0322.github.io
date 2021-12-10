@@ -14,10 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="项目地址https:&#x2F;&#x2F;github.com&#x2F;aixiao0322&#x2F;vue-element-admin 这里是线上demo地址">
@@ -214,16 +216,24 @@
             </span>
 
           
+            <span id="/2021/12/08/vue-element-edmin/" class="post-meta-item leancloud_visitors" data-flag-title="vue-element-edmin (中台人力资源管理系统)" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+              <span>℃</span>
+            </span>
   
   <span class="post-meta-item">
     
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Disqus：</span>
+      <span class="post-meta-item-text">Valine：</span>
     
-    <a title="disqus" href="/2021/12/08/vue-element-edmin/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/08/vue-element-edmin/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/12/08/vue-element-edmin/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/08/vue-element-edmin/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -245,7 +255,7 @@
 <p><img src="C:\Users\s\AppData\Roaming\Typora\typora-user-images\image-20211207171342940.png" alt="image-20211207171342940"></p>
 <h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="下载依赖"><a href="#下载依赖" class="headerlink" title="下载依赖"></a>下载依赖</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure>
 
-<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+<h1 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="builtin-name">run</span> serve</span><br></pre></td></tr></table></figure>
 
 <h1 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">├── src                        # 源代码</span><br><span class="line">│   ├── api                    # 所有请求</span><br><span class="line">│   ├── assets                 # 主题 字体等静态资源</span><br><span class="line">│   ├── components             # 全局公用组件</span><br><span class="line">│   ├── icons                  # 项目所有 svg icons</span><br><span class="line">│   ├── layout                 # 全局 layout</span><br><span class="line">│   ├── router                 # 路由</span><br><span class="line">│   ├── store                  # 全局 store管理</span><br><span class="line">│   ├── styles                 # 全局样式</span><br><span class="line">│   ├── utils                  # 全局公用方法</span><br><span class="line">│   ├── vendor                 # 公用vendor</span><br><span class="line">│   ├── views                  # views 所有页面</span><br><span class="line">│   ├── App.vue                # 入口页面</span><br><span class="line">│   ├── main.js                # 入口文件 加载组件 初始化等</span><br><span class="line">│   └── permission.js          # 权限管理</span><br><span class="line">│   └── settings.js            # 配置文件</span><br></pre></td></tr></table></figure>
 
@@ -333,13 +343,7 @@
 
           </div>
           
-    
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -497,6 +501,8 @@
 <script src="/js/bookmark.js"></script>
 
 
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
 
 
   
@@ -515,39 +521,38 @@
 
 
 
+
   
 
   
+
 
 <script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://<your disqus shotname>.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
-<script>
-  var disqus_config = function() {
-    this.page.url = "http://example.com/2021/12/08/vue-element-edmin/";
-    this.page.identifier = "2021/12/08/vue-element-edmin/";
-    this.page.title = "vue-element-edmin (中台人力资源管理系统)";
-    };
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: disqus_config
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://<your disqus shotname>.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'l6M4SnuhiCKBnxpPdX1WbBB9-gzGzoHsz',
+      appKey     : 'u1jJ2Fs9DGFdfpIgDQll55ju',
+      placeholder: "请举手发言.... 请你填写自己的昵称，邮箱以及博客链接，为了更方便的找到您",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
 </script>
 
 </body>
